@@ -192,25 +192,10 @@ app.put('/sorted_one', (req, res) => {
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let port = process.env.PORT || 5000
 
 sequelize.sync().then(result => {
-    app.listen(5000, () => {
+    app.listen(port, () => {
         console.log('Server has been started')
     })
 }).catch(err=> console.log(err))
